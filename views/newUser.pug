@@ -1,0 +1,32 @@
+include header
+
+.alert.alert-danger(role='alert')
+    #{message}
+
+
+div(style="margin: 10px")
+    form(method='POST' action='/addUser')
+        .row.mb-3
+            label.col-sm-2.col-form-label(for='inputLastName') Nom
+            .col-sm-3
+                input#inputLastName.form-control(type='string' name="lastName"  required="required")
+        .row.mb-3
+            label.col-sm-2.col-form-label(for='inputFirstName') Prénom
+            .col-sm-3
+                input#inputFirstName.form-control(type='string', name="firstName" required="required")
+        .row.mb-3
+            label.col-sm-2.col-form-label(for='inputMail') Mail
+            .col-sm-3
+                input#inputMail.form-control(type='mail', name="mail" required="required")
+        .row.mb-3
+            label.col-sm-2.col-form-label(for='inputPassword') Mot de passe
+            .col-sm-3
+                input#inputPassword.form-control(type='password', name="password" required="required")
+        .row.mb-3
+            label.col-sm-2.col-form-label(for='inputConfirmPassword') Confirmation du mot de passe
+            .col-sm-3
+                input#inputconfirmPassword.form-control(type='password', name="confirmPassword" required="required")
+
+        button.btn.btn-primary(type='submit') Enregistrement
+div
+

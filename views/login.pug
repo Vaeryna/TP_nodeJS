@@ -1,0 +1,15 @@
+include header
+
+div(style="margin: 10px")
+    form(method="POST" action="/login")
+        .row.mb-3
+            label.col-sm-2.col-form-label(for='inputLastName') Mail
+            .col-sm-3
+                input#inputLastName.form-control(type='string', name="mail")
+        .row.mb-3
+            label.col-sm-2.col-form-label(for='inputPassword') Mot de passe
+            .col-sm-3
+                input#inputPassword.form-control(type='password', name="password")
+
+        button.btn.btn-primary(type='submit') Connexion
+div
